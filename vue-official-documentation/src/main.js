@@ -2,6 +2,19 @@ import "./assets/main.css";
 
 import { createApp } from "vue";
 import App from "./App.vue";
+import { ref } from 'vue'
+
+export default {
+    // `setup` は、Composition API 専用の特別なフックです。
+    setup() {
+      const count = ref(0);
+  
+      // ref をテンプレートに公開します
+      return {
+        count,
+      };
+    },
+  };
 
 // createApp 関数で新しい アプリケーションのインスタンス を作成することから始まります:
 // アプリケーションのインスタンスは .mount() メソッドが呼ばれるまで何もレンダリングしません。
